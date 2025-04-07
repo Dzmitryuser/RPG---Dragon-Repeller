@@ -1,4 +1,4 @@
-body {
+.main-game-window {
   background-image: url("./images/town.jpg");
   background-position: center;
   background-size: cover;
@@ -60,6 +60,8 @@ body {
 }
 
 button {
+  position: relative;
+  z-index: 2;
   font-size: 1.1em;
   padding: 0.6em 0.8em;
   border-radius: 0.5em;
@@ -84,7 +86,7 @@ button {
   inset: 0;
   margin: auto;
   border-radius: 0.9em;
-  z-index: -10;
+  z-index: 1;
   filter: blur(0);
   transition: filter 0.4s ease;
 }
@@ -95,4 +97,8 @@ button {
 }
 .container:active::before {
   filter: blur(0.2em);
+}
+
+@media (width <= 400px) {
+
 }

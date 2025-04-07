@@ -6,6 +6,7 @@ let fighting;
 let monsterHealth;
 let inventory = ["stick"];
 
+const mainGameWindow = document.querySelector("#main-game-window");
 const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3");
@@ -116,14 +117,17 @@ function update(location) {
 
 function goTown() {
   update(locations[0]);
+  mainGameWindow.style.backgroundImage = 'url("./images/town.jpg")';
 }
 
 function goStore() {
   update(locations[1]);
+  mainGameWindow.style.backgroundImage = 'url("./images/shop.jpg")';
 }
 
 function goCave() {
   update(locations[2]);
+  mainGameWindow.style.backgroundImage = 'url("./images/cave.jpg")';
 }
 
 function buyHealth() {
@@ -172,16 +176,19 @@ function sellWeapon() {
 function fightSlime() {
   fighting = 0;
   goFight();
+  mainGameWindow.style.backgroundImage = 'url("./images/slime.jpg")';
 }
 
 function fightBeast() {
   fighting = 1;
   goFight();
+  mainGameWindow.style.backgroundImage = 'url("./images/beast.jpg")';
 }
 
 function fightDragon() {
   fighting = 2;
   goFight();
+  mainGameWindow.style.backgroundImage = 'url("./images/dragon.jpg")';
 }
 
 function goFight() {
@@ -244,6 +251,7 @@ function defeatMonster() {
 
 function lose() {
   update(locations[5]);
+  mainGameWindow.style.backgroundImage = 'url("./images/sculls.jpg")';
 }
 
 function winGame() {

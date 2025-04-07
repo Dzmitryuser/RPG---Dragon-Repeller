@@ -5,7 +5,7 @@
 https://github.com/Dzmitryuser/RPG---Dragon-Repeller.git
 
 # Ссылка GitHub Pages
-
+https://dzmitryuser.github.io/RPG---Dragon-Repeller/
 
 # Проект: 🎨
 

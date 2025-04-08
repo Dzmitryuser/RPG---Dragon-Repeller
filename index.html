@@ -1,45 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./images/favicon.png" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./stiles/globals.css" />
+    <link rel="stylesheet" href="./stiles/styles.css" />
     <title>RPG - Dragon Repeller</title>
   </head>
-  <body class = "main-game-window" id = "main-game-window">
-    <div id="game">
-      <h1 class = "game-header">Dragon Repeller</h1>
-      <div id="stats">
-        <span class="stat"
-          >XP: <strong><span id="xpText">0</span></strong></span
-        >
-        <span class="stat"
-          >Health: <strong><span id="healthText">100</span></strong></span
-        >
-        <span class="stat"
-          >Gold: <strong><span id="goldText">50</span></strong></span
-        >
+  <body class="whole_page_holder">
+    <main id="main-game-window" class="main_game_window">
+      <div id="game" class="game_info_control_window">
+        <h1 class="game-header">Dragon Repeller</h1>
+        <div id="stats" class="stats_holder">
+          <span class="stat"
+            >XP: <strong><span id="xpText">0</span></strong></span
+          >
+          <span class="stat"
+            >Health: <strong><span id="healthText">100</span></strong></span
+          >
+          <span class="stat"
+            >Gold: <strong><span id="goldText">50</span></strong></span
+          >
+        </div>
+        <div id="controls" class="controls_holder">
+          <div class="container">
+            <button id="button1" class="button button1">Go to store</button>
+          </div>
+          <div class="container">
+            <button id="button2" class="button button2">Go to cave</button>
+          </div>
+          <div class="container">
+            <button id="button3" class="button button3">Fight dragon</button>
+          </div>
+        </div>
+        <div id="monsterStats" class="monster_stats_holder">
+          <span class="stat"
+            >Monster Name: <strong><span id="monsterName"></span></strong
+          ></span>
+          <span class="stat"
+            >Health: <strong><span id="monsterHealth"></span></strong
+          ></span>
+        </div>
+        <div id="text" class="game_text">
+          Welcome to Dragon Repeller. You must defeat the dragon that is
+          preventing people from leaving the town. You are in the town square.
+          Where do you want to go? Use the buttons above.
+        </div>
       </div>
-      <div id="controls">
-        <div class="container"><button id="button1">Go to store</button></div>
-        <div class="container"><button id="button2">Go to cave</button></div>
-        <div class="container"><button id="button3">Fight dragon</button></div>
-      </div>
-      <div id="monsterStats">
-        <span class="stat"
-          >Monster Name: <strong><span id="monsterName"></span></strong
-        ></span>
-        <span class="stat"
-          >Health: <strong><span id="monsterHealth"></span></strong
-        ></span>
-      </div>
-      <div id="text">
-        Welcome to Dragon Repeller. You must defeat the dragon that is
-        preventing people from leaving the town. You are in the town square.
-        Where do you want to go? Use the buttons above.
-      </div>
-    </div>
-    <script src="./script.js"></script>
+      <script src="./script.js"></script>
+    </main>
   </body>
 </html>

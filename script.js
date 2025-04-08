@@ -6,6 +6,7 @@ let fighting;
 let monsterHealth;
 let inventory = ["stick"];
 
+const controlButtonsHolder = document.querySelector(".controls_holder");
 const mainGameWindow = document.querySelector("#main-game-window");
 const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
@@ -229,7 +230,6 @@ function attack() {
 
 function getMonsterAttackValue(level) {
   const hit = level * 5 - Math.floor(Math.random() * xp);
-  console.log(hit);
   return hit > 0 ? hit : 0;
 }
 
@@ -252,10 +252,13 @@ function defeatMonster() {
 function lose() {
   update(locations[5]);
   mainGameWindow.style.backgroundImage = 'url("./images/sculls.jpg")';
+  controlButtonsHolder.style.flexWrap = "wrap";
 }
 
 function winGame() {
   update(locations[6]);
+  mainGameWindow.style.backgroundImage = 'url("./images/win.jpg")';
+  controlButtonsHolder.style.flexWrap = "wrap";
 }
 
 function restart() {
@@ -268,6 +271,7 @@ function restart() {
   healthText.innerText = health;
   xpText.innerText = xp;
   goTown();
+  controlButtonsHolder.style.flexWrap = "nowrap";
 }
 
 function easterEgg() {
